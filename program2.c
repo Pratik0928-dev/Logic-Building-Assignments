@@ -1,17 +1,23 @@
 #include<stdio.h>
 
-void Display()
+void Display(iNo)
 {
-    int i = 0;
-    for(i = 1; i<=5;i++)
+    int iCnt=0;
+    while(iNo>=iCnt)
     {
-        printf("Marvellous\n");
-
+        printf("*");
+        iNo--;
     }
 }
 
 int main()
 {
-    Display();
+    int iValue = 0;
+
+    printf("enter number :\n");
+    scanf("%d",&iValue);
+
+    Display(iValue);
+
     return 0;
 }

@@ -1,18 +1,35 @@
 #include<stdio.h>
-void Accept(int iNo)
+
+#define TRUE 1
+#define FALSE 0
+
+typedef int BOOL;
+
+BOOL ChkEven(int iNo)
 {
-    int iCnt = 0;
-    for(iCnt=1;iCnt<=iNo;iCnt++)
+    int rValue = 2;
+    if((iNo % rValue ) ==0)
     {
-        printf("*");
+       printf("This is even number/n");
+        return TRUE;
     }
+    else
+    {   
+       printf("This is odd number/n");
+        return FALSE;
+    }
+
 }
+
 int main()
 {
     int iValue =0;
-    printf("enter number :");
+    BOOL bRet = FALSE;
+
+    printf("Enter Number :");
     scanf("%d",&iValue);
-    
-    Accept(iValue);
+
+    bRet = ChkEven(iValue);
+    printf("The Reminder is :%d",bRet);
     return 0;
 }
